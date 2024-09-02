@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // เช็คว่าองค์ประกอบอยู่ใน viewport
             if (position.top < window.innerHeight && position.bottom >= 0) {
                 element.style.animationName = 'moveLoadUp';
-                element.style.animationDuration = '1s';
+                element.style.animationDuration = '1.5s';
             }
         });
     });
