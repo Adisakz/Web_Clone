@@ -1,11 +1,12 @@
 @import '../color.css';
 
-.presen{
+.presen {
     width: 100%;
     background-image: url('../../image/background.jpg');
     background-size: cover;
 }
-.content-presen{
+
+.content-presen {
     padding-top: 4rem;
     height: 100dvh;
     display: flex;
@@ -13,7 +14,8 @@
     align-items: center;
     gap: 3rem;
 }
-.content_left{
+
+.content_left {
     height: 100%;
     width: 100%;
     display: flex;
@@ -24,21 +26,26 @@
     font-size: 2rem;
 }
 
-.content_left h1{
+.content_left h1 {
     font-size: 5rem;
-   text-align: center;
+    text-align: center;
+    animation-name: moveLoadDown;
+    animation-duration: 1s;
 }
 
-.content_left p{
+.content_left p {
     font-size: 2rem;
     text-align: center;
+    animation-name: moveLoadDown;
+    animation-duration: 1s;
 }
-.content_left .btnNav:hover{
-    background-color: var(--babyBlue); 
+
+.content_left .btnNav:hover {
+    background-color: var(--babyBlue);
     color: var(--bidnightBlue);
 }
 
-.content_left .btnNav{
+.content_left .btnNav {
     margin-top: 1rem;
     font-size: 1.5rem;
     background-color: var(--orange);
@@ -50,14 +57,17 @@
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    animation-name: moveLoadDown;
+    animation-duration: 1s;
+
 }
 
-.tools{
+.tools {
     width: 100%;
 
 }
 
-.content-tools{
+.content-tools {
     display: flex;
     width: 100%;
     margin: 5rem 0;
@@ -65,7 +75,7 @@
     align-items: center;
 }
 
-.tools h1{
+.tools h1 {
     color: var(--blue);
     font-size: 2.6rem;
     font-weight: bold;
@@ -75,12 +85,12 @@
     justify-content: center;
 }
 
-.content-tools .row{
-     width: 100%;
-     display: flex;
+.content-tools .row {
+    width: 100%;
+    display: flex;
 }
 
-.content-tools .row .tools{
+.content-tools .row .tools {
     display: flex;
     width: 50%;
     display: flex;
@@ -88,7 +98,7 @@
     align-items: center;
 }
 
-.content-tools .row .tools .edge{
+.content-tools .row .tools .edge {
     height: 8.5rem;
     width: 8.5rem;
     border: 5px solid var(--orange);
@@ -99,31 +109,31 @@
     box-shadow: 0 +0.5rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
-.content-tools .row .tools p{
+.content-tools .row .tools p {
     font-size: 1.9rem;
     margin-top: 1.5rem;
     color: var(--blue);
-    font-weight:500;
+    font-weight: 500;
     text-shadow: 0 +0.2rem 0.2rem rgba(0, 0, 0, 0.4);
     text-align: center;
 }
 
-.content-tools .row .tools img{
+.content-tools .row .tools img {
     width: 70%;
 }
 
-.line{
+.line {
     width: 100%;
     border: 2.8px solid var(--blue);
     margin: 4rem 0;
-    
+
 }
 
-.works{
-    width: 100%;   
+.works {
+    width: 100%;
 }
 
-.works h1{
+.works h1 {
     color: var(--blue);
     font-size: 2.6rem;
     font-weight: bold;
@@ -134,60 +144,84 @@
     text-align: center;
 }
 
-.content-works{
-    margin-top: 5rem 0;  
+.content-works {
+    margin-top: 5rem 0;
 }
 
-.content-works .row{
+.content-works .row {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.content-works .row .work{
+.content-works .row .work {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     width: 45%;
     margin: 3rem 0;
 }
-.content-works .row .work img{ 
+
+.content-works .row .work img {
     width: 100%;
     box-shadow: 0 +0.5rem 0.5rem rgba(0, 0, 0, 0.3);
 }
-.content-works .row .work h1{ 
+
+.content-works .row .work h1 {
     margin-top: 2rem;
-    font-weight:500;
+    font-weight: 500;
 }
-.content-works .row .work p{ 
+
+.content-works .row .work p {
     font-size: 1.4rem;
     color: var(--blue);
 }
 
 
-@media (max-width: 820px){
-    .content-tools{
+@keyframes moveLoadDown {
+    0% {
+        transform: translateY(-20rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes moveLoadUp {
+    0% {
+        transform: translateY(+20rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+
+
+
+
+
+@media (max-width: 820px) {
+    .content-tools {
         flex-direction: row;
     }
-    .content-tools .row{
+
+    .content-tools .row {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .content-works .row{
+
+    .content-works .row {
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
     }
-    .content-works .row .work{
+
+    .content-works .row .work {
         width: 70%;
     }
 
 }
-@media (min-width: 815px){
-   
-}
-
-
