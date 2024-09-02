@@ -1,0 +1,123 @@
+@import './color.css';
+
+nav{
+    background-color: #2d599e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: all .3s ease;
+    font-weight: bold;
+}
+
+nav .logo-color{
+    color: var(--orange);
+}
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+nav .container .Logo{
+    display: flex;
+    font-size:2rem;
+    margin-right: auto;
+    color: #FFFFFF;
+}
+
+nav ul{
+    display: flex;
+    width: 100%;
+    list-style: none;
+    justify-content: end;
+    height: 100%;
+    display: flex;
+    align-items: center;
+   
+}
+
+nav a{   
+    padding: 0.5rem 3rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+nav .menuicon{   
+    padding: 0.5rem 1rem;  
+    margin-right: 0rem;  
+}
+
+
+nav .container a:hover{   
+    background-color:var(--babyBlue); 
+    color: var(--orange);
+    border-radius: 10rem;
+}
+
+
+nav .container .btnNav:hover{
+    background-color: var(--babyBlue); 
+    color: var(--bidnightBlue);
+}
+
+nav .container .btnNav{
+    background-color: var(--orange);
+    color: #FFFFFF;
+    border-radius: 10rem;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: rgba(20, 92, 160, 0.5);
+    width: 24rem;
+    z-index: 999;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    display: flex;
+    justify-content: center;
+    top:10px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.sidebar .spec{
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 815px){
+    .container .hideOnMobile{
+        display: none;
+    }
+    
+}
+@media (min-width: 815px){
+    .container .menuicon{
+        display: none;
+    }
+}
+
+
+
