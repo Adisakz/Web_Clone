@@ -19,20 +19,20 @@
 <body>
     <nav></nav>
 
-    <section class="presen">
+    <section class="presen" id="home">
         <div class="container">
             <div class="content-presen">
                 <div class="content_left">
                     <h1>รับทำเว็บไซต์ ออกแบบเว็บไซต์</h1>
                     <p>บริการทำเว็บไซต์ภาครัฐ เอกชน โปรเจคนักศึกษา</p>
                     <p>ราคาถูก พร้อมให้คำปรึกษาฟรี</p>
-                    <a href="http://" class="btnNav">ติดต่อสอบถาม</a>
+                    <a href="#email" class="btnNav">ติดต่อสอบถาม</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="tools">
+    <section class="tools" id="tools">
         <div class="container">
             <h1>Tools</h1>
             <div class="content-tools">        
@@ -97,7 +97,7 @@
     </div>
     
 
-    <section class="works">
+    <section class="works" id="works">
         <div class="container">
             <h1>ผลงาน</h1>
             <div class="content-works">
@@ -117,7 +117,7 @@
         </div>
     </section>
 
-    <footer></footer>
+    <footer id="email"></footer>
     <div class="signature"></div>
     <script src="./js/navbar.js"></script>
     <script src="./js/footer.js"></script>
@@ -125,3 +125,27 @@
 </body>
 
 </html>
+<script>
+    document.querySelectorAll('.content_left a').forEach(click => {
+    click.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        let targetSection = document.querySelector(this.getAttribute('href'));
+        let offset = 0;
+
+        // ปรับ offset สำหรับ sections tools และ works
+        if (targetSection.id === 'tools' || targetSection.id === 'works') {
+            offset = -100;
+        }
+
+        // คำนวณตำแหน่งที่เลื่อนโดยรวม offset
+        let sectionPosition = targetSection.getBoundingClientRect().top + window.scrollY + offset;
+
+        // เลื่อนหน้าเว็บไปยังตำแหน่งที่คำนวณไว้
+        window.scrollTo({
+            top: sectionPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
